@@ -1,0 +1,2 @@
+# litepaper
+The XMTP Litepaper
