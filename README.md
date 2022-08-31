@@ -301,6 +301,26 @@ When messaging recipients, senders are only required to present the public addre
 2. The client app sends an invitation to both the sender and recipient's invitation topic. The invitation contains a randomly generated topic name, and [passed symmetric key material](#423-private-invitation-topic). The invitation is encrypted using a [Triple Diffie Hellman derived key](#422-triple-diffie-hellman-derived-key).
 3. The client app sends the message to the generated topic in the invitation, using a key derived from the generated key material from step 2. The unencrypted message is signed using the sender's identity key, with the signature included inside the encrypted payload.
 
+
+```mermaid
+sequenceDiagram
+    participant S as Sender
+    participant CT as Recipient Contact Topic
+    participant SIT as Sender Invite Topic
+    participant RIT as Recipient Invite Topic
+    participant Convo as Conversation Topic
+    CT-->>S: Receive recipient contact bundle
+    S->>SIT: Send invite
+    Note over S,SIT: Encrypted using Triple Diffie Hellman shared secret
+    S->>RIT: Send invite
+    Note over S,RIT: Encrypted using Triple Diffie Hellman shared secret
+    Loop Conversation
+        S->>Convo: Send message
+        Note over S,Convo: Encrypted using key material contained in the invites
+        Convo-->>S: Receive reply
+    end
+```
+
 For subsequent messages, the following flow is used:
 
 1. The client app retrieves the invitation from the sender's invitation topic.
