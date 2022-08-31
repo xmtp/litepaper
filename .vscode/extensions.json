@@ -1,0 +1,10 @@
+{
+  "recommendations":
+  [
+    "DavidAnson.vscode-markdownlint",
+    "bierner.github-markdown-preview",
+    "yzhang.markdown-all-in-one",
+    "bierner.markdown-footnotes",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
