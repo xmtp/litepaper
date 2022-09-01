@@ -201,7 +201,7 @@ However, email, along with the most popular messaging apps and platforms, push n
 
 While there's no specific limitation that would prevent those protocols from being adapted to use blockchain accounts as identities, the core issue we find is that they rely on specific servers or service providers to provide access. In the case of email, messages are transferred between mail servers controlled by specific entities. Associating an otherwise decentralized blockchain account with a centralized mail server to send and receive mail could pose a number of risks, such as censorship by the service provider, or denial of service attacks targeting the provider.
 
-Furthermore, we believe that privacy preservation is important in the context of modern communication mediums, and protocols such as SMTP or XMPP lack the necessary components to protect users from surveillance by their service providers. In the context of SMTP, for example, relationships, and the frequency of communication between senders and recipients is highly observable by mail servers facilitating the exchanges, regardless if mail payloads are encrypted.
+Furthermore, we believe that privacy preservation is important in the context of modern communication mediums, and protocols such as SMTP or XMPP lack the necessary components to protect users from surveillance by their service providers. In the context of SMTP, for example, relationships, and the frequency of communication between senders and recipients is highly observable by mail servers facilitating the exchanges, regardless of whether mail payloads are encrypted.
 
 ### 3.2 Limitations in communicating with blockchain accounts today
 
